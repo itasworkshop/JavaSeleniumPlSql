@@ -24,8 +24,19 @@ public class TestJava8LambdaComparator {
         //Collections.sort(mylist,new EmployeeComparator());
 
         //same comparator using lambda
+        // () -> {}
+        //Collections.sort(mylist,(Employee2 o1, Employee2 o2) -> {
+           // return o1.getName().compareTo(o2.getName());
+       // });
+
         Collections.sort(mylist,(Employee2 o1, Employee2 o2) -> {
-            return o1.getName().compareTo(o2.getName());
+            if(o1.getId()>o2.getId()){
+                return 5;
+            }else if(o1.getId() < o2.getId()){
+                return -5;
+            }else {
+                return 0;
+            }
         });
 
         System.out.println(mylist);
