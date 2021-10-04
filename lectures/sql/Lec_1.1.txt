@@ -1,0 +1,35 @@
+SQL --> structured query language
+
+data --> any meaning full information
+DBMS --> database management system --> software which is used to manage data
+for example
+Microsoft excel --> csv
+table --> rows and columns
+
+RDBMS --> Relational Database Mangement System
+we organise our data in rows and columns --> one table is related with another table using id.
+Employee --> Department
+
+Department
+did	dname		location
+101	Accounts	Block A
+102	Finance		Block B
+103	HR		Block C
+
+
+Employee
+eid	ename		salary		dept
+11	Rajesh		50000		103
+12	Suraj		60000		103
+13	Tom		40000		102
+
+SQL --> query
+we can get data and manipulate and creating and managing rdbms softwares
+manage data and software
+
+
+
+
+
+
+
