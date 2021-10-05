@@ -1,0 +1,70 @@
+Functions
+1) to_char
+
+Aggregate Functions
+the functions which we apply on group of data
+
+count, sum, min, max, avg
+
+2 WAQ to display number of people department wise.
+select department_id, count(*) counting from employees group by department_id order by counting desc;
+
+Join
+displaying data from multiple tables
+select employees.department_id, departments.department_name from employees,departments where employees.department_id = departments.department_id;
+
+Types of join
+1) Natural join
+all data mapped with all data;
+
+2) Outer join
+
+select e.department_id, d.department_name 
+from employees e,departments d
+where e.department_id = d.department_id;
+
+select e.department_id, d.department_name 
+from employees e join departments d 
+on e.department_id = d.department_id;
+
+3) Left Outer Join
+
+select e.department_id, d.department_name 
+from employees e left outer join departments d 
+on e.department_id = d.department_id;
+
+4) Right Outer Join
+
+select e.department_id, d.department_name 
+from employees e right outer join departments d 
+on e.department_id = d.department_id;
+
+select e.department_id, d.department_name, count(*) counting 
+from employees e,departments d
+where e.department_id = d.department_id
+group by e.department_id, d.department_name;
+
+Subquery
+WAQ to display name of person who is earning maximum salary?
+24000
+query inside query --> subquery
+select first_name,salary from employees where salary = (select max(salary) from employees);
+
+DDL
+1) create table
+create table students(id number,name varchar2(30),marks number);
+
+2) insert
+insert into students values(11,'Rajesh',83);
+
+3) with constraints
+create table students2(id number primary key,
+name varchar2(30) unique,
+marks number not null);
+
+1) WAQ to display second highest salary employee information.
+2) WAQ to display number of employees who joined in January.
+3) WAQ to display minimum salary department wise.
+4) WAQ to display all the employees located in New Jersey.
+5) WAQ to display information of employee who does not have manager.
+
