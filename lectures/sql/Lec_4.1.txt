@@ -66,6 +66,48 @@ hello Suraj
 PL/SQL procedure successfully completed.
 
 
+Working with functions
+
+create or replace function addition(num1 IN integer,num2 IN integer)
+	RETURN integer
+is
+	result integer;
+BEGIN
+	result := num1 + num2;
+	RETURN result;
+END;
+
+BEGIN
+dbms_output.put_line(addition(23,25));
+END;
+
+working with SQL inside PL/SQL
+
+select salary from employees where employee_id = 205;
+
+create or replace procedure giveSalaryForId(eid IN integer)
+IS
+	esalary employees.salary%TYPE;
+BEGIN
+	dbms_output.put_line(eid);
+	select salary into esalary from employees where employee_id = eid;
+	dbms_output.put_line(SQL%ROWCOUNT);
+	dbms_output.put_line(esalary);
+END;
+
+SQL> begin
+  2  giveSalaryForId(205);
+  3  end;
+  4  /
+205
+1
+12008
+
+PL/SQL procedure successfully completed.
+
+
+
+
 
 
 
