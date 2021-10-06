@@ -1,0 +1,71 @@
+PLSQL -Procedural Language SQL
+
+SQL - standard for all database
+PLSQL - proprietry of Oracle Database
+
+procedural-
+step by step flow/execution of program/query
+
+example- if-else, loops, variables, begin-end of my program, UDF, function/procedures, 
+stored procedure - pre parsed functions/procedures stored in database engine itself
+
+for checking out your output into same command line, use below setting
+
+SET SERVEROUT ON
+
+PL/SQL Block
+1. Minimum block
+
+SQL> BEGIN
+  2  dbms_output.put_line('hello world');
+  3  END;
+  4
+  5  /
+hello world
+
+PL/SQL procedure successfully completed.
+
+CASE INSENSITIVE BUT BY CONVENTION USE CAPITAL FOR KEYWORDS
+
+2. with decalre
+DECLARE
+	name varchar2(20) := 'Ravi Kishan';
+BEGIN
+	dbms_output.put_line(name);
+END;
+
+3. Named block - procedure/functions
+procedure --> function returing void in java
+
+
+create or replace procedure printMe(name IN varchar2)
+IS
+	message varchar2(20) := 'hello ';
+BEGIN
+	message := message || name;
+	dbms_output.put_line(message);
+END printMe;
+
+SQL> create or replace procedure printMe(name IN varchar2)
+  2  IS
+  3  message varchar2(20) := 'hello ';
+  4  BEGIN
+  5  message := message || name;
+  6  dbms_output.put_line(message);
+  7  END printMe;
+  8  /
+
+Procedure created.
+
+SQL> BEGIN
+  2  printMe('Suraj');
+  3  END;
+  4  /
+hello Suraj
+
+PL/SQL procedure successfully completed.
+
+
+
+
+
