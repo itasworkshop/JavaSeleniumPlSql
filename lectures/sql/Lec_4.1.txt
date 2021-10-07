@@ -137,6 +137,69 @@ END;
 
 select * from employees where employee_id = 205;
 
+create or replace procedure giveSalaryForId(eid IN integer)
+IS
+	erecord employees%ROWTYPE;	
+BEGIN
+	dbms_output.put_line(eid);
+	select * into erecord from employees where employee_id = eid;
+	dbms_output.put_line(SQL%ROWCOUNT);
+	dbms_output.put_line(erecord.first_name);
+	dbms_output.put_line(erecord.last_name);
+	dbms_output.put_line(erecord.salary);
+	dbms_output.put_line(erecord.department_id);
+END;
+
+Cursor
+memory area in database
+
+create table emp as select * from employees;
+
+Type of cursor
+1. Implicit cursor
+the cursor managed by oracle engine itself
+
+Attributes of implicit cursor
+1.SQL%found
+2.SQL%notfound
+3.SQL%ROWCOUNT
+4.SQL%ISOPEN --> always false --> as soon as we use oracle closes this
+
+Example:
+DECLARE
+	total_rows integer;
+BEGIN
+	update emp set salary = salary + 400 where department_id = 110;
+	IF SQL%notfound THEN
+		dbms_output.put_line('no record found');
+	ELSIF SQL%found THEN
+		total_rows := sql%rowcount;
+		dbms_output.put_line(total_rows || ' updated salary');
+	END IF;
+END;
+
+Write a procedure for giving bonus to employees based on below rules - if job_id is IT_PROG then salary will be increase by 1000 and if job_id is SA_REP then salary will be increase by 700.
+
+
+
+2. Explicit cursor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
