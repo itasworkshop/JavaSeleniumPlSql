@@ -91,7 +91,7 @@ IS
 BEGIN
 	dbms_output.put_line(eid);
 	select salary into esalary from employees where employee_id = eid;
-	dbms_output.put_line(SQL%ROWCOUNT);
+	dbms_output.put_line(SQL%ROWCOUNT);	
 	dbms_output.put_line(esalary);
 END;
 
@@ -105,8 +105,37 @@ SQL> begin
 
 PL/SQL procedure successfully completed.
 
+Multi result
+
+select salary from employees where department_id = 110;
+
+create or replace procedure giveSalaryForId(deptid IN integer)
+IS
+	esalary employees.salary%TYPE;
+BEGIN
+	dbms_output.put_line(eid);
+	select salary into esalary from employees where department_id = deptid;
+	dbms_output.put_line(SQL%ROWCOUNT);
+	dbms_output.put_line(esalary);
+END;
 
 
+
+select first_name,salary from employees where employee_id = 205;
+
+create or replace procedure giveSalaryForId(eid IN integer)
+IS
+	ename employees.first_name%TYPE;
+	esalary employees.salary%TYPE;
+BEGIN
+	dbms_output.put_line(eid);
+	select first_name,salary into ename,esalary from employees where employee_id = eid;
+	dbms_output.put_line(SQL%ROWCOUNT);
+	dbms_output.put_line(ename);
+	dbms_output.put_line(esalary);
+END;
+
+select * from employees where employee_id = 205;
 
 
 
