@@ -184,6 +184,72 @@ Write a procedure for giving bonus to employees based on below rules - if job_id
 
 2. Explicit cursor
 
+where we open,fetch and close, manage the cursor, useful when we are dealing with multiple records.
+
+
+DECLARE
+    did emp.department_id%TYPE := 60;
+    
+    erecord employees%ROWTYPE;	
+    
+    CURSOR emp_cur is
+    select * from emp where department_id = did;
+    
+BEGIN
+
+    OPEN emp_cur;
+    
+    LOOP
+        FETCH emp_cur into erecord;
+        EXIT when emp_cur%NOTFOUND;
+            dbms_output.put_line(SQL%ROWCOUNT);
+            dbms_output.put_line(erecord.first_name||erecord.last_name||erecord.salary);         
+        
+    END LOOP;
+        
+    CLOSE emp_cur;
+        
+END;
+
+create or replace procedure giveSalaryForDidNew(did IN integer)
+is
+    erecord employees%ROWTYPE;	    
+    CURSOR emp_cur is
+    select * from emp where department_id = did;
+    
+BEGIN
+
+    OPEN emp_cur;    
+    LOOP
+        FETCH emp_cur into erecord;
+        EXIT when emp_cur%NOTFOUND;
+            dbms_output.put_line(SQL%ROWCOUNT);
+            dbms_output.put_line(erecord.first_name||erecord.last_name||erecord.salary);         
+        
+    END LOOP;        
+    CLOSE emp_cur;        
+END;
+
+begin
+giveSalaryForDidNew(110);
+end;
+    
+
+1. Write a procedure for displaying comnined bonus with employee to employees based on below rules - if job_id is IT_PROG then salary will be increase by 1000 and if job_id is SA_REP then salary will be increase by 700.
+
+2. Wrtite query to fetch all records of JOB_ID manager.
+Rajesh MGR 12000
+Rajesh MGR 12000
+Rajesh MGR 12000
+
+3. Write a query to fetch all records of JOB_ID manager with their subordinates.
+
+Rajesh 	MGR 	Raj	IT
+		Tom	AC
+		Suraj	SA
+Reshma 	MGR	Tom	AC
+		Suraj	SA
+
 
 
 
