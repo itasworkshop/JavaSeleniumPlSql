@@ -1,0 +1,70 @@
+Exception Handling
+
+gracefully ending your application with haulting
+
+declare
+    result integer;
+begin    
+    dbms_output.put_line('before exception');
+    result := 10/0;
+    dbms_output.put_line('business logic '||result);
+    dbms_output.put_line('after exception');
+end;
+
+declare
+    result integer;
+begin    
+    dbms_output.put_line('before exception');
+    result := 10/0;
+    dbms_output.put_line('business logic '||result);   
+    
+    EXCEPTION
+        WHEN zero_divide then
+        dbms_output.put_line('oops something went wrong -divide by zero' );
+    dbms_output.put_line('after exception');
+end;
+
+declare
+    result integer;
+begin    
+    dbms_output.put_line('before exception');
+    result := 10/2;
+    dbms_output.put_line('business logic '||result);   
+    
+    EXCEPTION
+        WHEN zero_divide then
+        dbms_output.put_line('oops something went wrong -divide by zero' );
+    dbms_output.put_line('after exception');
+end;
+
+Triggers
+
+these are also named plsql block which are invoked based on some triggering event
+
+example- create below trigger and take any insert ,update delete operation emp and you would see trigger getting fired automatically.
+
+create or replace trigger emp_table_tr
+BEFORE
+    INSERT or UPDATE of salary,department_id or delete on emp
+begin
+    dbms_output.put_line('employee record is getting changed.');
+end;
+
+delete from emp where employee_id = 206;
+
+1. Create trigger which store information of the user and timestamp of operation updating salary in seperate emp_log table;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
