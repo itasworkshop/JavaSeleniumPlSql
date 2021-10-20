@@ -29,7 +29,7 @@ public class MainPageTest {
         //open("https://www.jetbrains.com/");
     }
 
-    @Test
+    //@Test
     public void yahooSearch() {
 
         $("#yschsp").sendKeys("WHO", Keys.ENTER);
