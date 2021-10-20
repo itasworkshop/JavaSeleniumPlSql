@@ -24,11 +24,19 @@ public class MainPageTest {
 
     @BeforeEach
     public void setUp() {
-        open("https://www.google.com/");
+        open("https://in.yahoo.com/");
+        //open("https://www.google.com/");
         //open("https://www.jetbrains.com/");
     }
 
     @Test
+    public void yahooSearch() {
+
+        $("#yschsp").sendKeys("WHO", Keys.ENTER);
+        $("#yschsp").shouldHave(attribute("value", "WHO"));
+    }
+
+    //@Test
     public void search() {
         //mainPage.searchButton.click();
 

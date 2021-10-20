@@ -2,3 +2,8 @@ Selenium --> is a framework for automating tests in web application.
 
 -java, kotlin, groovy
 - supports maven and gradle
+
+
+
+Steps to perform www.google.com tests
+1: 
