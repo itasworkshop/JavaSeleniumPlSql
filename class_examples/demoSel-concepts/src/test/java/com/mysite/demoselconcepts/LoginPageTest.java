@@ -32,7 +32,7 @@ public class LoginPageTest {
     public void login(){
         $("#ysignin").click();
         $("#login-username").sendKeys("itasworkshop", Keys.ENTER);
-        $("#login-passwd").sendKeys("Viron@123",Keys.ENTER);
+        $("#login-passwd").sendKeys("******",Keys.ENTER);
         $("#ysignout > div.text.user.fl-l.ml-7").shouldHave(Condition.text("itasworkshop"));
     }
 
