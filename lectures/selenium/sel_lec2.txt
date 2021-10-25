@@ -1,0 +1,15 @@
+WebDriver
+
+- provides functionality to create browser , page and other functions for test cases
+- provides communication between language and browser
+
+java code --> webdriver --> Google Chrome Browser
+
+CSS Selectors
+- ID
+- class
+- attribute
+- sub string
+
+Xpath
+are slower, you should prefer css selectors

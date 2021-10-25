@@ -1,9 +1,51 @@
 Selenium --> is a framework for automating tests in web application.
 
--java, kotlin, groovy
+1 UI
+2 API Testing
+3 Unit Level Automation testing
+
+Automation testing covers both 
+1 Functional 
+functionality of the application
+exa - selenium,playwright
+
+2 Performance
+test cases related to performance of the application
+response time, number of users ,pdf download time
+exa- JMeter
+
+
+
+- open source framework- not for desktop based application
+- java, kotlin, groovy
 - supports maven and gradle
+- Selenium IDE -provides playback and record functionality
+- supports all browsers
+- support for unit testing like Junit and integrated with TestNg
+- Webdriver API - no need for sepearte installation
+- internally selenium doesnot have any sepearate library for Junit or TestNg but it uses these
 
-
-
+Example
 Steps to perform www.google.com tests
-1: 
+1: choose selector
+2: use selenide $(cssselector) and respective methods for clicking or sending keys.
+
+Selenium Suite
+Selenium is made up of below
+1 Selenium IDE -one browser extention provides playback and record
+easy but limited not suitable for robust scenarios
+
+2 Selenium Remote Control(deprecated)
+automated UI test using HTTP proxy server
+RC serve
+RC client
+
+3 Webdriver
+- provides facility to creat browser, web page and all methods etc to write automated test cases
+- test scripts
+- replacement of RC, faster and easier than RC
+
+4 Selenium Grid
+Hub-Node architecture providing distribute nodes for parallel execution
+
+

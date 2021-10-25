@@ -36,7 +36,7 @@ public class LoginPageTest {
         $("#ysignout > div.text.user.fl-l.ml-7").shouldHave(Condition.text("itasworkshop"));
     }
 
-    @Test
+    //@Test
     public void getUnreadEmailCount() throws InterruptedException {
         $("#ysignin").click();
         $("#login-username").sendKeys("itasworkshop", Keys.ENTER);
