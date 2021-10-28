@@ -4,3 +4,4 @@ com\mysite\demoselconcepts\LoginPageWebDriverTest.class
 com\mysite\demoselconcepts\MainPage.class
 com\mysite\demoselconcepts\LinksAttributeTest.class
 com\mysite\demoselconcepts\MainPageTest.class
+com\mysite\demoselconcepts\DragDropTest.class

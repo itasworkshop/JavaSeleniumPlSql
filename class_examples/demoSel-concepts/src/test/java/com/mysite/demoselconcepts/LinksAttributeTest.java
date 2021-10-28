@@ -49,7 +49,7 @@ public class LinksAttributeTest {
         ImageIO.write(downImg,"jpg",new File("C:\\Development\\JavaSeleniumPlSql\\class_examples\\demoSel-concepts\\src\\test\\resources\\myimage.jpg"));
     }
 
-    @Test
+    //@Test
     public void testGetAmazonHomePageLinks() throws IOException {
         System.setProperty("webdriver.chrome.driver", "C:\\Development\\JavaSeleniumPlSql\\class_examples\\demoSel-concepts\\src\\test\\resources\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
