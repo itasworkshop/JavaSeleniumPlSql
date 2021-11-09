@@ -1,0 +1,158 @@
+{
+  "id": "a658d5a9-7f09-47e5-a199-f1133d82cdf9",
+  "version": "2.0",
+  "name": "test-google",
+  "url": "https://www.oracle.com/in/index.html",
+  "tests": [{
+    "id": "621aa500-bd2b-41ac-9db5-c9506faab5ea",
+    "name": "my-test-1",
+    "commands": [{
+      "id": "be1f58a8-d2b7-4b71-90fb-4be866369002",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaa2dec1-1c03-468e-90b5-1b1aeb4fb7b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x660",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12d4bc77-02f0-4847-9ad9-0f8eac7f58fe",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c08f4e0-1cad-419d-95fe-ef1aecf1a0aa",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.rr4y5c",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62f84b0f-8c1f-4f37-8fb8-28460373c4ae",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e412814-083c-45a2-aafe-a2055e353e66",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2758716e-0f2f-4aa7-9a69-ae321dbb8ea2",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "hello"
+    }, {
+      "id": "a8748816-c094-4d87-a322-757b1cf01248",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "cdaefb51-a927-46e1-8ee5-42fe6e8ae653",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61cf37aa-9930-4f31-831b-e5560c49d6c0",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.RzdJxc:nth-child(1) .WZIVy",
+      "targets": [
+        ["css=.RzdJxc:nth-child(1) .WZIVy", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div/div[2]/div[2]/div/div/div/div/div/a/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/a/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceb60f44-fd75-4543-9a5d-961d1cd4f42f",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=div:nth-child(2) > .tF2Cxc .LC20lb",
+      "targets": [
+        ["css=div:nth-child(2) > .tF2Cxc .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hello (Adele song) - Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d815fbaa-f1fb-47f0-b697-7883b66b7ffa",
+      "comment": "",
+      "command": "click",
+      "target": "id=rso",
+      "targets": [
+        ["id=rso", "id"],
+        ["css=#rso", "css:finder"],
+        ["xpath=//div[@id='rso']", "xpath:attributes"],
+        ["xpath=//div[@id='search']/div/div", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fff1ca37-2eb3-48ed-aa44-0d728f21b1da",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .tF2Cxc .LC20lb",
+      "targets": [
+        ["css=div:nth-child(2) > .tF2Cxc .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hello (Adele song) - Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a45215bd-21b8-427c-a451-5b1ae97e4d00",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ae5e57d-b4e7-431a-9160-14c83d5e022a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["621aa500-bd2b-41ac-9db5-c9506faab5ea"]
+  }],
+  "urls": ["https://www.google.com/", "https://www.oracle.com/in/index.html"],
+  "plugins": []
+}

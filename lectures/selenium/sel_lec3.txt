@@ -1,0 +1,7 @@
+Selenium IDE
+
+open source web automation tool
+used for record and playback
+
+x-path using chrome
+/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[2]
